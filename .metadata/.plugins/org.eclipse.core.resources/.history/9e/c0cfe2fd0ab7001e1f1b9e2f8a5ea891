@@ -1,0 +1,35 @@
+package org.generation.collections;
+
+import java.util.HashSet;
+
+public class HashSetCollection {
+
+	public static void main(String[] args) {
+		//HashSet es una clase de collections donde cada elemento es unico, es decir, no se repiten los elementos
+		HashSet<String> animals = new HashSet<String>();
+		
+		animals.add("Buho");
+		animals.add("Perro");
+		animals.add("Gato");
+		animals.add("Caballo");
+		animals.add("Ornitorrinco");
+		animals.add("Cebra");
+		animals.add("Ornitorrinco");
+		animals.add("Mapache");
+		animals.add("Capibara");
+		animals.add("Capibara");
+		animals.add("Capibara");
+		animals.add("Capibara");
+		
+		//Imprimir el HashSet
+		System.out.println(animals); //Imprime los elementos pero no los repetidos ya que cada elemento debe ser unico 
+		
+		//Metodo contains: conocer si un elemento se encuentra dentro del set
+		System.out.println(animals.contains("Capibara"));
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+package controlFlujo;
+
+public class FlujoControl {
+
+	public static void main(String[] args) { //Debe coincidir la clase con el nombre del documento.
+				
+		//recuerda que para que algo se ejecute, siempre debe de ir en el metodo principal 
+		
+		//Primero defino una variable del tipo string donde se almacena un dato 
+		String viaje = null; //Dejo en null y despues agrego fecha 
+		//Variable declarada e inicializada, en null a proposito, para tener un "espacio" de memmoria ya asignado, y solo reemplazarlo por un nuevo dato 
+		
+		//Para validar si podemos viajar en cierta fecha
+		
+		
+		
+		String viaje = "16-01-2024";
+				
+		if (viaje != null) { //variable vacia
+					System.out.println("Ya no tenemos fechas disponibles, una disculpa.");
+					
+		} else {
+					System.out.println("Puede reservar su viaje");
+		}
+		
+		
+	} //Main
+
+} //Clase

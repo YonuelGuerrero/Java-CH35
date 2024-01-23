@@ -1,0 +1,52 @@
+package org.generation.exercises;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/*
+ * Programa que permite que un usuario agregue nombre y apellido de estudiantes matriculados en una universidad. Posteriomente, muestra la lista de los estudiantes agregados.
+ * --Requerimientos
+ * 		>Utilizar ArrayList
+ * 		>Scanner para interactuar con el usuario y que agregue estudiantes
+ * 		>Loop para que se agreguen varios estudiantes (do-while)
+ * 		>Opcion para salir del loop con la palabra 'salir' (if-else, switch, != (≠), try-catch)
+ * 		>Mostrar lista de estudiantes (forEach)
+ */
+
+public class SistemaEscolar {
+
+	public static void main(String[] args) {
+		//Inicializar un ArrayList para guardar a los estudiantes
+		ArrayList<String> estudiantes = new ArrayList<>();
+		
+		//Scanner para el usuario 
+		Scanner scanner = new Scanner(System.in);
+		
+		//Loop para permitir agregar usuarios
+		String nombreEstudiante; //Inicializando la variable de manera GLOBAL (fuera del do, porque dentro seria local)
+		
+		do {
+			System.out.println("Ingresa el nombre del estudiante. Escribe 'Salir' para finalizar.");
+			nombreEstudiante = scanner.nextLine(); //Invocado de manera local
+			estudiantes.add(nombreEstudiante); //agrega el nombre al ArrayList
+			} while (!nombreEstudiante.equals("Salir")); //Siempre que NO se escriba salir, el loop se sigue ejecutando
+		
+		//Mostrar lista de estudiantes (for-each)
+		System.out.println("**Lista de estudiantes**");
+		for(String estudiante:estudiantes) {
+			//si no quiero que se muestre la palabra salir voy a agregar una condicional sobre la variable que guarda a los elementos que iteran sobre el ArrayList
+			if(!estudiante.toLowerCase().equals("salir")) {
+			System.out.println(estudiante);
+		}
+		}
+		
+		scanner.close();
+		
+		/* Modificar nuestro programa para permitir salir con las palabras 'Salir' o 'salir'.
+		 * Agreguar la opción que permite que el usuario elimine un estudiante después de haberlo agregado y muestre la lista actualizada después de la eliminación (.remove();). */
+		
+		
+
+	}
+
+}
